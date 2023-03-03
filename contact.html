@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<header class="header">View From</header>
+<div id="disp">
+</div>
+
+<a class="back" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+</body>
+<script >
+    var stored = JSON.parse(localStorage.getItem('link'));
+    console.log(stored);
+    var div = $('#disp');
+    stored.forEach((e,f) => {
+        console.log(f);
+        console.log('this:',e);
+        div.append(`<div class="${f}"><span class="q2">${f+1}:<span>${e['question']}
+        </span></span><br></div><br>`);
+        let t = e['options'];
+        // console.log(t.classList.add("j1"));
+        var span = $(`.${f}`);
+        for (let j = 0; j < t.length; j++) {
+            span.append(`<div class="showw"><input id="${j}" type="radio" name="q${f}">
+            <label class="dispshow" for="${j}">${t[j].value}</label><br></div>`);
+            
+        }
+    });
+    // $(document).ready(function(){
+    //     console.log('hyyy');
+    //     // console.log(stored);
+    //     document.getElementById('disp').innerHTML =  localStorage.getItem('link');
+        let p = $('#disp').html();
+        console.log(p);
+    // });
+</script>
+</html>

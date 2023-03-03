@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
+
+    <link href="style1.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class='header'>User Input Form</div>
+    </header>
+    <main>
+
+        <div class="all">
+            <form id="form">
+                <div class="container">
+                    1.<input type="text" class="question" aria-multiline="true" g_editable="true" contenteditable="true"
+                        required value="" placeholder="Question" name="questions" /><span class="valid"></span>
+                    <button onclick="addrow()" id="q1" value="submit"><i class="fa-solid fa-plus"></i></button>
+                    <div class="d"></div>
+                    <div>
+                        <div class="option">
+                            <div class="opt">
+                                <input type="radio" class="t1" name="o1" data-op="0">
+                                <input type="text" class="x" placeholder="Option 1" data-ques="0" name="x" value="">
+                                <br>
+                                <input type="radio" class="t1" name="o1" data-op="0"><input type="text" class="x"
+                                    placeholder="Option 2" name="x" data-ques="0" value=""><br>
+                                <input type="radio" class="t1" name="o1" data-op="0"><input type="text" class="x"
+                                    placeholder="Option 3" name="x" data-ques="0" value=""><br>
+                                <input type="radio" class="t1" name="o1" data-op="0"><input type="text" class="x"
+                                    placeholder="Option 4" name="x" data-ques="0" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                </div>
+                <div class="btn1">
+                    <input type="submit" name="submit" value="submit" id="see" class="submit btn btn-success">
+                    <!-- <form action="new.html"> -->
+                    <!-- <input type="submit" value="Show"  class="display"> -->
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <!-- <div id="disp"> -->
+        <!-- <span class="q1"></span>
+        <input type="radio"><span class="q2"></span>
+        <input type="radio"><span class="q2"></span>
+        <input type="radio"><span class="q2"></span>
+        <input type="radio"><span class="q2"></span> -->
+        <!-- </div> -->
+        <!-- </form> -->
+    </main>
+</body>
+<script src="script1.js"></script>
+
+</html>
